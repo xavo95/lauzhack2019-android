@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Lauzhack2019App</string>
+    <string name="logo">Logo</string>
+    <string name="multi_player">Multiplayer</string>
+    <string name="single_player">Single Player</string>
+
+    <string name="stock_name_1">APPLE</string>
+    <string name="stock_price_1">265.76$</string>
+    <string name="stock_name_2">GOOGLE</string>
+    <string name="stock_price_2">1334.87$</string>
+    <string name="stock_name_3">MICROSOFT</string>
+    <string name="stock_price_3">149.97$</string>
+    <string name="stock_name_4">SPOTIFY</string>
+    <string name="stock_price_4">119.01$</string>
+    <string name="stock_name_5">AMAZON</string>
+    <string name="stock_price_5">1739.49$</string>
+    <string name="icon">icon</string>
+    <string name="opponent">opponent</string>
+    <string name="start_money">10000$</string>
+    <string name="player">Player</string>
+    <string name="timer_default">15</string>
+    <string name="cpu">CPU</string>
+    <string name="rival">Rival</string>
+    <string name="turn">Turn 1</string>
+    <string name="buy">BUY</string>
+    <string name="sell">SELL</string>
+    <string name="zero">0</string>
+</resources>

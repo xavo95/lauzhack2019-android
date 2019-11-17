@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/swissquote_bg_dark">
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_score"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/title_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/player"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="40dp" />
+
+                    <TextView
+                        android:id="@+id/title_player_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/start_money"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="40dp"
+                        android:layout_below="@id/title_player"/>
+
+                    <TextView
+                        android:id="@+id/title_timer"
+                        android:layout_toRightOf="@id/title_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="40dp"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/timer_default"
+                        android:textSize="20sp"
+                        android:layout_toEndOf="@id/title_player"
+                        />
+
+                    <TextView
+                        android:id="@+id/title_turn"
+                        android:layout_toRightOf="@id/title_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="40dp"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/turn"
+                        android:textSize="15sp"
+                        android:layout_toEndOf="@id/title_player"
+                        android:layout_below="@id/title_timer"
+                        />
+
+                    <TextView
+                        android:id="@+id/title_oponent"
+                        android:layout_toRightOf="@id/title_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="0dp"
+                        android:paddingTop="10dp"
+                        android:gravity="end"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/opponent"
+                        android:layout_toEndOf="@id/title_timer"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="0dp" />
+
+                    <TextView
+                        android:id="@+id/title_oponent_amount"
+                        android:layout_toRightOf="@id/title_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="0dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="end"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/start_money"
+                        android:layout_toEndOf="@id/title_timer"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="0dp"
+                        android:layout_below="@id/title_oponent"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_apple"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_apple"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/apple_logo"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon" />
+
+                    <TextView
+                        android:id="@+id/title_apple"
+                        android:layout_toRightOf="@id/thumbnail_apple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_name_1"
+                        android:layout_toEndOf="@id/thumbnail_apple" />
+
+                    <TextView
+                        android:id="@+id/price_apple"
+                        android:layout_toRightOf="@id/thumbnail_apple"
+                        android:layout_below="@id/title_apple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_price_1"
+                        android:layout_toEndOf="@id/thumbnail_apple" />
+
+                    <ImageView
+                        android:id="@+id/apple_price_tendency"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/equal"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon"
+                        android:layout_alignBottom="@id/price_apple"
+                        android:layout_toRightOf="@id/price_apple"
+                        android:layout_toEndOf="@id/price_apple" />
+
+                    <TextView
+                        android:id="@+id/quantity_apple"
+                        android:layout_toLeftOf="@id/buy_apple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="29dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/zero"
+                        android:layout_toStartOf="@id/buy_apple" />
+
+                    <Button
+                        android:id="@+id/buy_apple"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/buy"
+                        android:layout_alignParentEnd="true" />
+
+                    <Button
+                        android:id="@+id/sell_apple"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/buy_apple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/sell"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_google"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_google"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/google_logo"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon" />
+
+                    <TextView
+                        android:id="@+id/title_google"
+                        android:layout_toRightOf="@id/thumbnail_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_name_2"
+                        android:layout_toEndOf="@id/thumbnail_google" />
+
+                    <TextView
+                        android:id="@+id/price_google"
+                        android:layout_toRightOf="@id/thumbnail_google"
+                        android:layout_below="@id/title_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_price_2"
+                        android:layout_toEndOf="@id/thumbnail_google" />
+
+                    <ImageView
+                        android:id="@+id/google_price_tendency"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/equal"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon"
+                        android:layout_alignBottom="@id/price_google"
+                        android:layout_toRightOf="@id/price_google"
+                        android:layout_toEndOf="@id/price_google" />
+
+                    <TextView
+                        android:id="@+id/quantity_google"
+                        android:layout_toLeftOf="@id/buy_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="29dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/zero"
+                        android:layout_toStartOf="@id/buy_google" />
+
+                    <Button
+                        android:id="@+id/buy_google"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/buy"
+                        android:layout_alignParentEnd="true" />
+
+                    <Button
+                        android:id="@+id/sell_google"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/buy_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/sell"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_microsoft"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_microsoft"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/microsoft_logo"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon" />
+
+                    <TextView
+                        android:id="@+id/title_microsoft"
+                        android:layout_toRightOf="@id/thumbnail_microsoft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_name_3"
+                        android:layout_toEndOf="@id/thumbnail_microsoft" />
+
+                    <TextView
+                        android:id="@+id/price_microsoft"
+                        android:layout_toRightOf="@id/thumbnail_microsoft"
+                        android:layout_below="@id/title_microsoft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_price_3"
+                        android:layout_toEndOf="@id/thumbnail_microsoft" />
+
+                    <ImageView
+                        android:id="@+id/microsoft_price_tendency"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/equal"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon"
+                        android:layout_alignBottom="@id/price_microsoft"
+                        android:layout_toRightOf="@id/price_microsoft"
+                        android:layout_toEndOf="@id/price_microsoft" />
+
+                    <TextView
+                        android:id="@+id/quantity_microsoft"
+                        android:layout_toLeftOf="@id/buy_microsoft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="29dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/zero"
+                        android:layout_toStartOf="@id/buy_microsoft" />
+
+                    <Button
+                        android:id="@+id/buy_microsoft"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/buy"
+                        android:layout_alignParentEnd="true" />
+
+                    <Button
+                        android:id="@+id/sell_microsoft"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/buy_microsoft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/sell"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_spotify"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_spotify"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/spotify_logo"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon" />
+
+                    <TextView
+                        android:id="@+id/title_spotify"
+                        android:layout_toRightOf="@id/thumbnail_spotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_name_4"
+                        android:layout_toEndOf="@id/thumbnail_spotify" />
+
+                    <TextView
+                        android:id="@+id/price_spotify"
+                        android:layout_toRightOf="@id/thumbnail_spotify"
+                        android:layout_below="@id/title_spotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_price_4"
+                        android:layout_toEndOf="@id/thumbnail_spotify" />
+
+                    <ImageView
+                        android:id="@+id/spotify_price_tendency"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/equal"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon"
+                        android:layout_alignBottom="@id/price_spotify"
+                        android:layout_toRightOf="@id/price_spotify"
+                        android:layout_toEndOf="@id/price_spotify" />
+
+                    <TextView
+                        android:id="@+id/quantity_spotify"
+                        android:layout_toLeftOf="@id/buy_spotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="29dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/zero"
+                        android:layout_toStartOf="@id/buy_spotify" />
+
+                    <Button
+                        android:id="@+id/buy_spotify"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/buy"
+                        android:layout_alignParentEnd="true" />
+
+                    <Button
+                        android:id="@+id/sell_spotify"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/buy_spotify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/sell"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_amazon"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_amazon"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="71dp"
+                        android:layout_height="75dp"
+                        android:background="@drawable/amazon_logo"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon" />
+
+                    <TextView
+                        android:id="@+id/title_amazon"
+                        android:layout_toRightOf="@id/thumbnail_amazon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_name_5"
+                        android:layout_toEndOf="@id/thumbnail_amazon" />
+
+                    <TextView
+                        android:id="@+id/price_amazon"
+                        android:layout_toRightOf="@id/thumbnail_amazon"
+                        android:layout_below="@id/title_amazon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/stock_price_5"
+                        android:layout_toEndOf="@id/thumbnail_amazon" />
+
+                    <ImageView
+                        android:id="@+id/amazon_price_tendency"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/equal"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@string/icon"
+                        android:layout_alignBottom="@id/price_amazon"
+                        android:layout_toRightOf="@id/price_amazon"
+                        android:layout_toEndOf="@id/price_amazon" />
+
+                    <TextView
+                        android:id="@+id/quantity_amazon"
+                        android:layout_toLeftOf="@id/buy_amazon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="29dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/zero"
+                        android:layout_toStartOf="@id/buy_amazon" />
+
+                    <Button
+                        android:id="@+id/buy_amazon"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/buy"
+                        android:layout_alignParentEnd="true" />
+
+                    <Button
+                        android:id="@+id/sell_amazon"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/buy_amazon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/swissquote_text_fg"
+                        android:text="@string/sell"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>
