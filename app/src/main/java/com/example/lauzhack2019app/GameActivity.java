@@ -343,10 +343,10 @@ public class GameActivity extends AppCompatActivity {
                     }
                 });
             } else {
-                challenge.cpuBuyOrSale();
                 timer.cancel();
                 timerTemp = TIMER_MAX;
                 if(turnTemp < TURN_MAX) {
+                    challenge.cpuBuyOrSale();
                     turnTemp++;
                     runOnUiThread(new Runnable() {
                         @Override
@@ -370,13 +370,16 @@ public class GameActivity extends AppCompatActivity {
                     timer = new Timer();
                     timer.schedule(new UpdateTimerText(), 0, 1000);
                 } else {
-                    String message = "";
-                    if (yourMoney.compareTo(challenge.getCpuMoney()) == 1) {
-                        message = "You won.";
-                    } else if (yourMoney.compareTo(challenge.getCpuMoney()) == -1) {
-                        message = "You lost.";
+                    challenge.cpuSellAll();
+                    BigDecimal cpuMoney = challenge.getCpuMoney();
+                    String message = "You " + bigDecimalToString(yourMoney) + "$, CPU " +
+                            bigDecimalToString(cpuMoney);
+                    if (yourMoney.compareTo(cpuMoney) == 1) {
+                        message += ". You won.";
+                    } else if (yourMoney.compareTo(cpuMoney) == -1) {
+                        message += ". You lost.";
                     } else {
-                        message = "You draw.";
+                        message += ". You draw.";
                     }
                     final String finalMessage = message;
                     runOnUiThread(new Runnable() {

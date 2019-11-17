@@ -66,6 +66,29 @@ class Challenge {
         buySaleAmazon();
     }
 
+    void cpuSellAll() {
+        while (cpuAppleAmount > 0) {
+            cpuMoney = cpuMoney.add(applePrice);
+            cpuAppleAmount--;
+        }
+        while (cpuGoogleAmount > 0) {
+            cpuMoney = cpuMoney.add(googlePrice);
+            cpuGoogleAmount--;
+        }
+        while (cpuMicrosoftAmount > 0) {
+            cpuMoney = cpuMoney.add(microsoftPrice);
+            cpuMicrosoftAmount--;
+        }
+        while (cpuSpotifyAmount > 0) {
+            cpuMoney = cpuMoney.add(spotifyPrice);
+            cpuSpotifyAmount--;
+        }
+        while (cpuAmazonAmount > 0) {
+            cpuMoney = cpuMoney.add(amazonPrice);
+            cpuAmazonAmount--;
+        }
+    }
+
     private void buySaleApple() {
         if (cpuAppleAmount > 0) {
             if(random.nextBoolean()) { // should sell apple
